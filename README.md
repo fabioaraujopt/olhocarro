@@ -1,7 +1,12 @@
 # Olhocarro.pt
 
-Static presentation page for **Olhocarro.pt** — a service that finds a car in
-Germany, handles the import, and delivers it in Portugal ready to drive.
+Static presentation page for **Olhocarro.pt** — a service that finds cheaper
+cars abroad and works out what they'd actually cost landed in Portugal, so you
+can decide whether it's worth bringing one in.
+
+It is a **search and pricing** service, not a freight or legalisation service.
+The copy is deliberately careful about that line: it promises to find cars and
+do the maths, and never to handle the import itself.
 
 > **O teu próximo destino**
 
