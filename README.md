@@ -93,9 +93,10 @@ GitHub Pages serves this as-is from the default branch, root folder:
    a `CNAME` file into the repo for you.
 4. Tick **Enforce HTTPS** once the certificate is issued (can take an hour).
 
-No `CNAME` file is committed here on purpose: committing one before DNS
-resolves makes Pages stop serving the `github.io` URL too, so the site would go
-dark while you wait.
+The `CNAME` file in the repo root holds `olhocarro.pt`. That is equivalent to
+setting the custom domain in Settings → Pages, and it is what tells GitHub
+which repository a request for that hostname belongs to — without it, Pages
+answers with its own 404 even when DNS is correct.
 
 ---
 
@@ -105,10 +106,6 @@ Three things are deliberately unfinished — they need a decision, not code:
 
 - **`geral@olhocarro.pt` is a placeholder.** The "Fala connosco" button points
   at it. Either create that mailbox or change the address in `index.html`.
-- **`canonical` and `og:url` point at the GitHub Pages URL.** Switch both to
-  `https://olhocarro.pt/` once the domain resolves, or social previews and
-  search results will keep citing the github.io address. They're marked with a
-  comment at the top of `index.html`.
 - **The jingle was generated with Google's Gemini music tool.** Worth checking
   Google's current terms on commercial use before this fronts a business that
   takes money.
