@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Olhocarro.pt — O teu próximo destino</title>
+<meta name="description" content="Encontramos o teu próximo carro na Alemanha, tratamos de toda a importação e entregamos em Portugal, legalizado e pronto a andar.">
+
+<!-- Troca estes dois para https://olhocarro.pt/ quando o domínio estiver a apontar para o site. -->
+<link rel="canonical" href="https://fabioaraujopt.github.io/olhocarro/">
+<meta property="og:url" content="https://fabioaraujopt.github.io/olhocarro/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:site_name" content="Olhocarro.pt">
+<meta property="og:title" content="Olhocarro.pt — O teu próximo destino">
+<meta property="og:description" content="Encontramos o teu próximo carro na Alemanha, tratamos de toda a importação e entregamos em Portugal, legalizado e pronto a andar.">
+<meta property="og:image" content="https://fabioaraujopt.github.io/olhocarro/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#F7F1E5">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* Paleta retirada do próprio cartão do jingle. */
+  :root{
+    --cream:#F7F1E5;
+    --cream-deep:#EFE7D6;
+    --navy:#112940;
+    --navy-soft:#3C5873;
+    --coral:#F38561;
+    --coral-deep:#DE6A45;
+    --amber:#F5C65A;
+    --teal:#2C94B1;
+    --radius:20px;
+    --gutter:20px;
+    --maxw:1080px;
+    color-scheme:light;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--navy);
+    font-family:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{max-width:100%;height:auto}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding-inline:var(--gutter)}
+
+  a{color:var(--navy)}
+  :focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+
+  /* ---------------------------------------------------------- cabeçalho */
+  header{padding:28px 0 8px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand svg{width:46px;height:46px;flex:none}
+  .brand b{font-weight:700;font-size:1.3rem;letter-spacing:-.02em}
+  .brand b span{color:var(--coral-deep)}
+
+  /* ---------------------------------------------------------------- hero */
+  .hero{padding-block:44px 60px;text-align:center}
+  .hero .mark{width:112px;height:112px;margin:0 auto 26px;display:block}
+  h1{
+    font-size:clamp(2.1rem,7vw,3.9rem);
+    line-height:1.08;
+    letter-spacing:-.03em;
+    font-weight:700;
+    margin:0 0 18px;
+  }
+  .lead{
+    font-size:clamp(1.02rem,2.6vw,1.26rem);
+    color:var(--navy-soft);
+    max-width:42ch;
+    margin:0 auto 34px;
+  }
+  .soon{
+    display:inline-flex;align-items:center;gap:9px;
+    background:var(--cream-deep);
+    border-radius:999px;
+    padding:7px 16px;
+    font-size:.83rem;font-weight:600;
+    letter-spacing:.04em;text-transform:uppercase;
+    color:var(--navy-soft);
+    margin-bottom:30px;
+  }
+  .soon i{width:8px;height:8px;border-radius:50%;background:var(--teal);flex:none}
+
+  /* -------------------------------------------------------------- jingle */
+  .jingle{
+    display:inline-flex;align-items:center;gap:16px;
+    background:#fff;
+    border:2px solid var(--cream-deep);
+    border-radius:999px;
+    padding:10px 24px 10px 10px;
+    box-shadow:0 10px 26px rgba(17,41,64,.08);
+  }
+  .jingle button{
+    width:56px;height:56px;flex:none;
+    border:0;border-radius:50%;
+    background:var(--coral);
+    color:#fff;
+    cursor:pointer;
+    display:grid;place-items:center;
+    transition:background .15s ease,transform .15s ease;
+  }
+  .jingle button:hover{background:var(--coral-deep)}
+  .jingle button:active{transform:scale(.94)}
+  .jingle button svg{width:22px;height:22px;fill:currentColor}
+  .jingle-text{text-align:left;line-height:1.3}
+  .jingle-text strong{display:block;font-weight:600;font-size:.98rem}
+  .jingle-text small{color:var(--navy-soft);font-size:.82rem}
+  /* Barra de progresso do jingle. */
+  .bar{height:4px;width:96px;background:var(--cream-deep);border-radius:99px;margin-top:7px;overflow:hidden}
+  .bar i{display:block;height:100%;width:0;background:var(--amber);border-radius:99px}
+
+  /* -------------------------------------------------------------- secções */
+  section{padding-block:56px}
+  h2{
+    font-size:clamp(1.5rem,4vw,2.1rem);
+    letter-spacing:-.02em;font-weight:700;
+    margin:0 0 10px;text-align:center;
+  }
+  .sub{color:var(--navy-soft);text-align:center;margin:0 auto 40px;max-width:46ch}
+
+  .cards{display:grid;gap:18px;grid-template-columns:1fr}
+  .card{
+    background:#fff;
+    border-radius:var(--radius);
+    padding:30px 26px;
+    box-shadow:0 2px 14px rgba(17,41,64,.05);
+  }
+  .card .ico{
+    width:50px;height:50px;border-radius:14px;
+    display:grid;place-items:center;margin-bottom:18px;
+  }
+  .card .ico svg{width:26px;height:26px;fill:none;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+  .ico-a{background:#FDE9E2}.ico-a svg{stroke:var(--coral-deep)}
+  .ico-b{background:#FDF3DC}.ico-b svg{stroke:#B98A1E}
+  .ico-c{background:#DDEEF4}.ico-c svg{stroke:#1E6C83}
+  .card h3{margin:0 0 8px;font-size:1.14rem;font-weight:600;letter-spacing:-.01em}
+  .card p{margin:0;color:var(--navy-soft);font-size:.97rem}
+
+  /* --------------------------------------------------------------- passos */
+  .steps{counter-reset:s;display:grid;gap:14px;max-width:660px;margin:0 auto;padding:0;list-style:none}
+  .steps li{
+    counter-increment:s;
+    display:flex;gap:18px;align-items:flex-start;
+    background:#fff;border-radius:16px;padding:20px 22px;
+  }
+  .steps li::before{
+    content:counter(s);
+    flex:none;width:34px;height:34px;border-radius:50%;
+    background:var(--navy);color:var(--cream);
+    display:grid;place-items:center;
+    font-weight:600;font-size:.95rem;
+  }
+  .steps strong{display:block;font-weight:600;margin-bottom:2px}
+  .steps span{color:var(--navy-soft);font-size:.95rem}
+
+  /* ----------------------------------------------------------------- cta */
+  .cta{
+    background:var(--navy);color:var(--cream);
+    border-radius:26px;padding:52px 26px;text-align:center;
+  }
+  .cta h2{color:var(--cream)}
+  .cta p{color:#B9C8D6;max-width:40ch;margin:0 auto 28px}
+  .cta a{
+    display:inline-block;background:var(--coral);color:#fff;
+    text-decoration:none;font-weight:600;
+    padding:15px 32px;border-radius:999px;
+    transition:background .15s ease;
+  }
+  .cta a:hover{background:var(--coral-deep)}
+
+  footer{padding-block:44px 56px;text-align:center;color:var(--navy-soft);font-size:.85rem}
+  footer p{margin:5px 0}
+
+  @media (min-width:720px){
+    .cards{grid-template-columns:repeat(3,1fr)}
+    section{padding-block:80px}
+    .hero{padding-block:56px 76px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Olhocarro.pt — início">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M3 32 C11 10 53 10 61 32 C53 54 11 54 3 32 Z" fill="none" stroke="#112940" stroke-width="5" stroke-linejoin="round"/>
+        <circle cx="32" cy="32" r="12.6" fill="#F38561"/>
+        <circle cx="32" cy="32" r="9.7" fill="none" stroke="#112940" stroke-width="3.6"/>
+        <circle cx="32" cy="32" r="3.2" fill="#112940"/>
+        <path d="M22.3 32 H28.8 M35.2 32 H41.7" stroke="#112940" stroke-width="3.2" stroke-linecap="round"/>
+      </svg>
+      <b>olhocarro<span>.pt</span></b>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero wrap">
+    <svg class="mark" viewBox="0 0 64 64" role="img" aria-label="Olhocarro">
+      <title>Olhocarro</title>
+      <path d="M3 32 C11 10 53 10 61 32 C53 54 11 54 3 32 Z" fill="none" stroke="#112940" stroke-width="5" stroke-linejoin="round"/>
+      <circle cx="32" cy="32" r="12.6" fill="#F38561"/>
+      <circle cx="32" cy="32" r="9.7" fill="none" stroke="#112940" stroke-width="3.6"/>
+      <circle cx="32" cy="32" r="3.2" fill="#112940"/>
+      <path d="M22.3 32 H28.8 M35.2 32 H41.7" stroke="#112940" stroke-width="3.2" stroke-linecap="round"/>
+    </svg>
+
+    <p class="soon"><i aria-hidden="true"></i>Em breve</p>
+    <h1>O teu próximo destino</h1>
+    <p class="lead">
+      Encontramos o teu próximo carro na Alemanha, tratamos de toda a
+      importação e entregamos em Portugal — legalizado e pronto a andar.
+    </p>
+
+    <div class="jingle">
+      <button id="play" type="button" aria-label="Ouvir o jingle" aria-pressed="false">
+        <svg id="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <div class="jingle-text">
+        <strong>Ouve o nosso jingle</strong>
+        <small id="status">6 segundos</small>
+        <div class="bar" aria-hidden="true"><i id="fill"></i></div>
+      </div>
+    </div>
+
+    <audio id="audio" preload="metadata">
+      <source src="assets/jingle.mp3" type="audio/mpeg">
+      <source src="assets/jingle.m4a" type="audio/mp4">
+    </audio>
+  </div>
+
+  <section class="wrap">
+    <h2>Porque compensa importar da Alemanha</h2>
+    <p class="sub">É o maior mercado automóvel da Europa. Mais escolha, melhor equipamento e preços que em Portugal não existem.</p>
+    <div class="cards">
+
+      <article class="card">
+        <div class="ico ico-a" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 13l2-5a2 2 0 012-1h10a2 2 0 012 1l2 5"/><path d="M3 13h18v4a1 1 0 01-1 1h-1"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+        </div>
+        <h3>Mais carro pelo mesmo dinheiro</h3>
+        <p>Com o mesmo orçamento chegas a um carro melhor, mais novo ou com mais extras do que encontras cá.</p>
+      </article>
+
+      <article class="card">
+        <div class="ico ico-b" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+        </div>
+        <h3>Contas fechadas antes de comprar</h3>
+        <p>ISV, transporte, legalização e inspeção. Sabes o valor final à tua porta antes de dizeres sim.</p>
+      </article>
+
+      <article class="card">
+        <div class="ico ico-c" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3>Nós tratamos de tudo</h3>
+        <p>Procura, vistoria, documentos e transporte. Recebes o carro em Portugal com a matrícula feita.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>Como funciona</h2>
+    <p class="sub">Quatro passos. Falas com uma pessoa, do início ao fim.</p>
+    <ol class="steps">
+      <li><div><strong>Dizes-nos o que procuras</strong><span>Modelo, orçamento e o que é essencial para ti.</span></div></li>
+      <li><div><strong>Procuramos e verificamos</strong><span>Histórico, quilómetros e estado real antes de avançar.</span></div></li>
+      <li><div><strong>Aprovas o preço final</strong><span>Com todos os custos incluídos. Sem surpresas no fim.</span></div></li>
+      <li><div><strong>Entregamos em Portugal</strong><span>Legalizado, inspecionado e pronto a andar.</span></div></li>
+    </ol>
+  </section>
+
+  <section class="wrap">
+    <div class="cta">
+      <h2>Queres ser dos primeiros?</h2>
+      <p>Estamos a arrancar. Diz-nos o carro que procuras e entramos em contacto.</p>
+      <a href="mailto:geral@olhocarro.pt?subject=Quero%20saber%20mais%20—%20Olhocarro.pt">Fala connosco</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p><strong>Olhocarro.pt</strong> — O teu próximo destino</p>
+  <p>&copy; <span id="year">2026</span> Olhocarro.pt</p>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Jingle: botão explícito, nunca arranca sozinho.
+  // Nota: a variável do rótulo NÃO se pode chamar "status" — no escopo
+  // global isso colide com window.status, que converte o valor para texto,
+  // e as atualizações desaparecem sem dar erro.
+  var audio = document.getElementById('audio'),
+      btn   = document.getElementById('play'),
+      icon  = document.getElementById('icon').querySelector('path'),
+      fill  = document.getElementById('fill'),
+      label = document.getElementById('status');
+
+  var PLAY  = 'M8 5v14l11-7z',
+      PAUSE = 'M7 5h3.5v14H7zM13.5 5H17v14h-3.5z',
+      failed = false;
+
+  // Uma só função desenha tudo a partir do estado real do áudio, para que o
+  // rótulo nunca possa discordar do que está a tocar.
+  function render() {
+    var playing = !audio.paused && !audio.ended;
+    icon.setAttribute('d', playing ? PAUSE : PLAY);
+    btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+    btn.setAttribute('aria-label', playing ? 'Parar o jingle' : 'Ouvir o jingle');
+
+    var total = isFinite(audio.duration) ? Math.round(audio.duration) : 6;
+    if (failed) {
+      label.textContent = 'Não foi possível tocar aqui.';
+    } else if (playing) {
+      label.textContent = 'A tocar — ' + Math.ceil(audio.duration - audio.currentTime) + 's';
+    } else {
+      label.textContent = total + ' segundos';
+    }
+    fill.style.width = (audio.duration ? (audio.currentTime / audio.duration) * 100 : 0) + '%';
+  }
+
+  btn.addEventListener('click', function () {
+    if (audio.paused) {
+      var p = audio.play();
+      if (p && p.catch) { p.catch(function () { failed = true; render(); }); }
+    } else {
+      audio.pause();
+    }
+  });
+
+  ['play', 'pause', 'timeupdate', 'loadedmetadata', 'durationchange'].forEach(function (e) {
+    audio.addEventListener(e, render);
+  });
+  audio.addEventListener('ended', function () {
+    audio.currentTime = 0;   // deixa o jingle pronto a repetir
+    render();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
